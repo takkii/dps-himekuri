@@ -8,6 +8,11 @@
 
 ![dps-himekuri](https://github.com/takkii/dps-himekuri/blob/main/image/windows3.jpg)
 
+> ※ TwitterでWindowsだとdenops.vimが起動しないことをつぶやくと
+
+> [Issues](https://github.com/vim-denops/denops.vim/commit/b83cf1443257cb224c907c2dbcbd6f1459e2c11b)として対応してくださいました。
+
+> 迅速な対応でした。ありがとうございます。
 
 #### dein.toml (設定例)
 
