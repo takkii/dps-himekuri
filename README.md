@@ -1,4 +1,4 @@
-# Denops版日めくり
+# [Denops](https://github.com/vim-denops/denops.vim)版日めくり
 
 ### MacOS(UNIX) 環境動作例
 
