@@ -10,3 +10,5 @@ repo = 'takkii/dps-himekuri'
 ```
 
 ※ 何もしなくてもインストールだけで動きます。
+
+#### denops.vimの動作確認などでご利用どうぞ。
