@@ -1,6 +1,8 @@
 import { Denops } from "https://deno.land/x/denops_std@v1.0.0-alpha.0/mod.ts";
 
 export async function main(denops: Denops): Promise<void> {
+denops.dispatcher = {
+async himekuri(): Promise<void> {
 const week = ["日","月","火","水","木","金","土"];
 const OneDay = new Date();
 const comma = " : ";
@@ -44,4 +46,7 @@ if (MonthWareki == 1){
 } else {
 console.log("警告 : ありえない月です！JavaScriptの記述を確認願います！");
 }
+},
+};
+await denops.cmd(`command! Himekuri call denops#request('${denops.name}', 'himekuri', [])`);
 };
