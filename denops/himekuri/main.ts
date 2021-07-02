@@ -30,22 +30,15 @@ export async function main(denops: Denops): Promise<void> {
             const TimeNow =
                 str +
                 comma +
-                OneYear +
-                '年' +
-                (OneMonth) +
-                '月' +
-                (anyDays) +
-                '日' +
+                (OneYear) + '年' +
+                (OneMonth) + '月' +
+                (anyDays) + '日' +
                 comma +
-                (OneHour) +
-                '時' +
-                (OneMinute) +
-                '分' +
-                (OneSecond) +
-                '秒' +
+                (OneHour) + '時' +
+                (OneMinute) + '分' +
+                (OneSecond) + '秒' +
                 comma +
-                OneWeek[WeekDay] +
-                '曜日'
+                (OneWeek[WeekDay]) + '曜日'
 
             if (OneMonth == 1) {
                 console.log(TimeNow + comma + January)
