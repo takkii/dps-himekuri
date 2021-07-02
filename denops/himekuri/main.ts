@@ -47,18 +47,18 @@ export async function main(denops: Denops): Promise<void> {
                 OneWeek[WeekDay] +
                 '曜日'
 
-            const console_january: void = console.log(TimeNow + comma + January)
-            const console_february: void = console.log(TimeNow + comma + February)
-            const console_march: void = console.log(TimeNow + comma + March)
-            const console_april: void = console.log(TimeNow + comma + April)
-            const console_may: void = console.log(TimeNow + comma + May)
-            const console_june: void = console.log(TimeNow + comma + June)
-            const console_july: void = console.log(TimeNow + comma + July)
-            const console_august: void = console.log(TimeNow + comma + August)
-            const console_september: void = console.log(TimeNow + comma + September)
-            const console_october: void = console.log(TimeNow + comma + October)
-            const console_november: void = console.log(TimeNow + comma + November)
-            const console_december: void = console.log(TimeNow + comma + December)
+            const console_january = console.log(TimeNow + comma + January)
+            const console_february = console.log(TimeNow + comma + February)
+            const console_march = console.log(TimeNow + comma + March)
+            const console_april = console.log(TimeNow + comma + April)
+            const console_may = console.log(TimeNow + comma + May)
+            const console_june = console.log(TimeNow + comma + June)
+            const console_july = console.log(TimeNow + comma + July)
+            const console_august = console.log(TimeNow + comma + August)
+            const console_september = console.log(TimeNow + comma + September)
+            const console_october = console.log(TimeNow + comma + October)
+            const console_november = console.log(TimeNow + comma + November)
+            const console_december = console.log(TimeNow + comma + December)
 
             if (OneMonth == 1) {
                 console_january
