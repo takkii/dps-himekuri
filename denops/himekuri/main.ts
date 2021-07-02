@@ -3,60 +3,93 @@ import {Denops} from 'https://deno.land/x/denops_std@v1.0.0-alpha.0/mod.ts'
 export async function main(denops: Denops): Promise<void> {
     denops.dispatcher = {
         async himekuri(): Promise<void> {
-            const week = ['日', '月', '火', '水', '木', '金', '土']
+            const OneWeek = ['日', '月', '火', '水', '木', '金', '土']
             const OneDay = new Date()
             const comma = ' : '
             const str = '時刻を表示'
             const OneYear = OneDay.getFullYear()
+            const OneMonth = OneDay.getMonth() + 1
+            const anyDays = OneDay.getDate()
+            const OneHour = OneDay.getHours()
+            const OneMinute = OneDay.getMinutes()
+            const OneSecond = OneDay.getSeconds()
+            const WeekDay = OneDay.getDay()
+            const January = '睦月'
+            const February = '如月'
+            const March = '弥生'
+            const April = '卯月'
+            const May = '皐月'
+            const June = '水無月'
+            const July = '文月'
+            const August = '葉月'
+            const September = '長月'
+            const October = '神無月'
+            const November = '霜月'
+            const December = '師走'
 
             const TimeNow =
                 str +
                 comma +
-                OneDay.getFullYear() +
+                OneYear +
                 '年' +
-                (OneDay.getMonth() + 1) +
+                (OneMonth) +
                 '月' +
-                OneDay.getDate() +
+                (anyDays) +
                 '日' +
                 comma +
-                OneDay.getHours() +
+                (OneHour) +
                 '時' +
-                OneDay.getMinutes() +
+                (OneMinute) +
                 '分' +
-                OneDay.getSeconds() +
+                (OneSecond) +
                 '秒' +
                 comma +
-                week[OneDay.getDay()] +
+                OneWeek[WeekDay] +
                 '曜日'
 
-            const MonthWareki = OneDay.getMonth() + 1
+            const console_january: void = console.log(TimeNow + comma + January)
+            const console_february: void = console.log(TimeNow + comma + February)
+            const console_march: void = console.log(TimeNow + comma + March)
+            const console_april: void = console.log(TimeNow + comma + April)
+            const console_may: void = console.log(TimeNow + comma + May)
+            const console_june: void = console.log(TimeNow + comma + June)
+            const console_july: void = console.log(TimeNow + comma + July)
+            const console_august: void = console.log(TimeNow + comma + August)
+            const console_september: void = console.log(TimeNow + comma + September)
+            const console_october: void = console.log(TimeNow + comma + October)
+            const console_november: void = console.log(TimeNow + comma + November)
+            const console_december: void = console.log(TimeNow + comma + December)
 
-            if (MonthWareki == 1) {
-                console.log(TimeNow + comma + '睦月')
-            } else if (MonthWareki == 2) {
-                console.log(TimeNow + comma + '如月')
-            } else if (MonthWareki == 3) {
-                console.log(TimeNow + comma + '弥生')
-            } else if (MonthWareki == 4) {
-                console.log(TimeNow + comma + '卯月')
-            } else if (MonthWareki == 5) {
-                console.log(TimeNow + comma + '皐月')
-            } else if (MonthWareki == 6) {
-                console.log(TimeNow + comma + '水無月')
-            } else if (MonthWareki == 7) {
-                console.log(TimeNow + comma + '文月')
-            } else if (MonthWareki == 8) {
-                console.log(TimeNow + comma + '葉月')
-            } else if (MonthWareki == 9) {
-                console.log(TimeNow + comma + '長月')
-            } else if (MonthWareki == 10) {
-                console.log(TimeNow + comma + '神無月')
-            } else if (MonthWareki == 11) {
-                console.log(TimeNow + comma + '霜月')
-            } else if (MonthWareki == 12) {
-                console.log(TimeNow + comma + '師走')
+            if (OneMonth == 1) {
+                console_january
+            } else if (OneMonth == 2) {
+                console_february
+            } else if (OneMonth == 3) {
+                console_march
+            } else if (OneMonth == 4) {
+                console_april
+            } else if (OneMonth == 5) {
+                console_may
+            } else if (OneMonth == 6) {
+                console_june
+            } else if (OneMonth == 7) {
+                console_july
+            } else if (OneMonth == 8) {
+                console_august
+            } else if (OneMonth == 9) {
+                console_september
+            } else if (OneMonth == 10) {
+                console_october
+            } else if (OneMonth == 11) {
+                console_november
+            } else if (OneMonth == 12) {
+                console_december
             } else {
-                console.log('警告 : ありえない月です！JavaScriptの記述を確認願います！')
+                try {
+                    throw new Error('独自例外を発生させます!')
+                } catch (e) {
+                    console.error("ありえない月です！例外を発生させます", e.message);
+                }
             }
         },
     }
