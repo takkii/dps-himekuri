@@ -85,11 +85,7 @@ export async function main(denops: Denops): Promise<void> {
             } else if (OneMonth == 12) {
                 console_december
             } else {
-                try {
-                    throw new Error('独自例外を発生させます!')
-                } catch (e) {
-                    console.error("ありえない月です！例外を発生させます", e.message);
-                }
+
             }
         },
     }
