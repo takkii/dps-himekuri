@@ -73,9 +73,9 @@ export async function main(denops: Denops): Promise<void> {
                 console.log(TimeNow + comma + December)
             } else {
                 try {
-                    throw new Error('独自例外を発生させます!')
+                    throw new Error('ありえない月です、独自例外を発生させます!')
                 } catch (e) {
-                    console.error("ありえない月です！例外を発生させます", e.message);
+                    console.error("補足しました、例外メッセージです ... ", e.message);
                 }
             }
         },
