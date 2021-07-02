@@ -47,45 +47,36 @@ export async function main(denops: Denops): Promise<void> {
                 OneWeek[WeekDay] +
                 '曜日'
 
-            const console_january = console.log(TimeNow + comma + January)
-            const console_february = console.log(TimeNow + comma + February)
-            const console_march = console.log(TimeNow + comma + March)
-            const console_april = console.log(TimeNow + comma + April)
-            const console_may = console.log(TimeNow + comma + May)
-            const console_june = console.log(TimeNow + comma + June)
-            const console_july = console.log(TimeNow + comma + July)
-            const console_august = console.log(TimeNow + comma + August)
-            const console_september = console.log(TimeNow + comma + September)
-            const console_october = console.log(TimeNow + comma + October)
-            const console_november = console.log(TimeNow + comma + November)
-            const console_december = console.log(TimeNow + comma + December)
-
             if (OneMonth == 1) {
-                console_january
+                console.log(TimeNow + comma + January)
             } else if (OneMonth == 2) {
-                console_february
+                console.log(TimeNow + comma + February)
             } else if (OneMonth == 3) {
-                console_march
+                console.log(TimeNow + comma + March)
             } else if (OneMonth == 4) {
-                console_april
+                console.log(TimeNow + comma + April)
             } else if (OneMonth == 5) {
-                console_may
+                console.log(TimeNow + comma + May)
             } else if (OneMonth == 6) {
-                console_june
+                console.log(TimeNow + comma + June)
             } else if (OneMonth == 7) {
-                console_july
+                console.log(TimeNow + comma + July)
             } else if (OneMonth == 8) {
-                console_august
+                console.log(TimeNow + comma + August)
             } else if (OneMonth == 9) {
-                console_september
+                console.log(TimeNow + comma + September)
             } else if (OneMonth == 10) {
-                console_october
+                console.log(TimeNow + comma + October)
             } else if (OneMonth == 11) {
-                console_november
+                console.log(TimeNow + comma + November)
             } else if (OneMonth == 12) {
-                console_december
+                console.log(TimeNow + comma + December)
             } else {
-
+                try {
+                    throw new Error('独自例外を発生させます!')
+                } catch (e) {
+                    console.error("ありえない月です！例外を発生させます", e.message);
+                }
             }
         },
     }
