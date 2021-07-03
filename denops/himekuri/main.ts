@@ -9,7 +9,7 @@ export async function main(denops: Denops): Promise<void> {
             let time_now = '時刻を表示'
             let OneYear = OneDay.getFullYear()
             const anything_month = OneDay.getMonth()
-            const OneMonth = (anything_month + 1)
+            const OneMonth = anything_month + 1
             let anyDays = OneDay.getDate()
             let OneHour = OneDay.getHours()
             let OneMinute = OneDay.getMinutes()
