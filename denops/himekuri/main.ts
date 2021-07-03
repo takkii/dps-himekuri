@@ -31,39 +31,14 @@ export async function main(denops: Denops): Promise<void> {
                 comma +
                 (OneWeek[WeekDay]) + '曜日'
 
-            if (OneMonth == 1) {
+            try {
                 console.log(TimeNow + comma + something_Month)
-            } else if (OneMonth == 2) {
-                console.log(TimeNow + comma + something_Month)
-            } else if (OneMonth == 3) {
-                console.log(TimeNow + comma + something_Month)
-            } else if (OneMonth == 4) {
-                console.log(TimeNow + comma + something_Month)
-            } else if (OneMonth == 5) {
-                console.log(TimeNow + comma + something_Month)
-            } else if (OneMonth == 6) {
-                console.log(TimeNow + comma + something_Month)
-            } else if (OneMonth == 7) {
-                console.log(TimeNow + comma + something_Month)
-            } else if (OneMonth == 8) {
-                console.log(TimeNow + comma + something_Month)
-            } else if (OneMonth == 9) {
-                console.log(TimeNow + comma + something_Month)
-            } else if (OneMonth == 10) {
-                console.log(TimeNow + comma + something_Month)
-            } else if (OneMonth == 11) {
-                console.log(TimeNow + comma + something_Month)
-            } else if (OneMonth == 12) {
-                console.log(TimeNow + comma + something_Month)
-            } else {
-                try {
-                    throw new Error('ありえない月です、独自例外を発生させます!')
-                } catch (e) {
-                    console.error("補足しました、例外メッセージです ... ", e.message);
-                }
+            } catch (e) {
+                console.error("例外を補足しました、メッセージです ... ", e.message);
             }
         },
     }
+
     await denops.cmd(
         `command! Himekuri call denops#request('${denops.name}', 'himekuri', [])`
     )
