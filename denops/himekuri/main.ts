@@ -3,31 +3,31 @@ import {Denops} from 'https://deno.land/x/denops_std@v1.0.0-alpha.0/mod.ts'
 export async function main(denops: Denops): Promise<void> {
     denops.dispatcher = {
         async himekuri(): Promise<void> {
-            const OneWeek = ['日', '月', '火', '水', '木', '金', '土']
-            const OneDay = new Date()
-            const comma = ' : '
-            const str = '時刻を表示'
-            const OneYear = OneDay.getFullYear()
-            const OneMonth = OneDay.getMonth() + 1
-            const anyDays = OneDay.getDate()
-            const OneHour = OneDay.getHours()
-            const OneMinute = OneDay.getMinutes()
-            const OneSecond = OneDay.getSeconds()
-            const WeekDay = OneDay.getDay()
-            const January = '睦月'
-            const February = '如月'
-            const March = '弥生'
-            const April = '卯月'
-            const May = '皐月'
-            const June = '水無月'
-            const July = '文月'
-            const August = '葉月'
-            const September = '長月'
-            const October = '神無月'
-            const November = '霜月'
-            const December = '師走'
+            let OneWeek = ['日', '月', '火', '水', '木', '金', '土']
+            let OneDay = new Date()
+            let comma = ' : '
+            let str = '時刻を表示'
+            let OneYear = OneDay.getFullYear()
+            let OneMonth = OneDay.getMonth() + 1
+            let anyDays = OneDay.getDate()
+            let OneHour = OneDay.getHours()
+            let OneMinute = OneDay.getMinutes()
+            let OneSecond = OneDay.getSeconds()
+            let WeekDay = OneDay.getDay()
+            let January = '睦月'
+            let February = '如月'
+            let March = '弥生'
+            let April = '卯月'
+            let May = '皐月'
+            let June = '水無月'
+            let July = '文月'
+            let August = '葉月'
+            let September = '長月'
+            let October = '神無月'
+            let November = '霜月'
+            let December = '師走'
 
-            const TimeNow =
+            let TimeNow =
                 str +
                 comma +
                 (OneYear) + '年' +
