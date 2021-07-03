@@ -6,7 +6,7 @@ export async function main(denops: Denops): Promise<void> {
             let OneWeek = ['日', '月', '火', '水', '木', '金', '土']
             let OneDay = new Date()
             let comma = ' : '
-            let str = '時刻を表示'
+            let time_now = '時刻を表示'
             let OneYear = OneDay.getFullYear()
             const anything_month = OneDay.getMonth()
             const OneMonth = (anything_month + 1)
@@ -18,17 +18,13 @@ export async function main(denops: Denops): Promise<void> {
             let anyMonth = ['睦月', '如月', '弥生', '卯月', '皐月', '水無月', '文月', '葉月', '長月', '神無月', '霜月', '師走']
             let something_Month = anyMonth[anything_month]
 
-            let TimeNow =
-                str +
-                comma +
+            let TimeNow = time_now + comma +
                 (OneYear) + '年' +
                 (OneMonth) + '月' +
-                (anyDays) + '日' +
-                comma +
+                (anyDays) + '日' + comma +
                 (OneHour) + '時' +
                 (OneMinute) + '分' +
-                (OneSecond) + '秒' +
-                comma +
+                (OneSecond) + '秒' + comma +
                 (OneWeek[WeekDay]) + '曜日'
 
             try {
