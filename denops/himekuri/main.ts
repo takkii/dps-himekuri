@@ -8,24 +8,15 @@ export async function main(denops: Denops): Promise<void> {
             let comma = ' : '
             let str = '時刻を表示'
             let OneYear = OneDay.getFullYear()
-            let OneMonth = OneDay.getMonth() + 1
+            const OneMonth = OneDay.getMonth() + 1
             let anyDays = OneDay.getDate()
             let OneHour = OneDay.getHours()
             let OneMinute = OneDay.getMinutes()
             let OneSecond = OneDay.getSeconds()
             let WeekDay = OneDay.getDay()
-            let January = '睦月'
-            let February = '如月'
-            let March = '弥生'
-            let April = '卯月'
-            let May = '皐月'
-            let June = '水無月'
-            let July = '文月'
-            let August = '葉月'
-            let September = '長月'
-            let October = '神無月'
-            let November = '霜月'
-            let December = '師走'
+            let anything_month = OneDay.getMonth()
+            let anyMonth = ['睦月', '如月', '弥生', '卯月', '皐月', '水無月', '文月', '葉月', '長月', '神無月', '霜月', '師走']
+            let something_Month = anyMonth[anything_month]
 
             let TimeNow =
                 str +
@@ -41,29 +32,29 @@ export async function main(denops: Denops): Promise<void> {
                 (OneWeek[WeekDay]) + '曜日'
 
             if (OneMonth == 1) {
-                console.log(TimeNow + comma + January)
+                console.log(TimeNow + comma + something_Month)
             } else if (OneMonth == 2) {
-                console.log(TimeNow + comma + February)
+                console.log(TimeNow + comma + something_Month)
             } else if (OneMonth == 3) {
-                console.log(TimeNow + comma + March)
+                console.log(TimeNow + comma + something_Month)
             } else if (OneMonth == 4) {
-                console.log(TimeNow + comma + April)
+                console.log(TimeNow + comma + something_Month)
             } else if (OneMonth == 5) {
-                console.log(TimeNow + comma + May)
+                console.log(TimeNow + comma + something_Month)
             } else if (OneMonth == 6) {
-                console.log(TimeNow + comma + June)
+                console.log(TimeNow + comma + something_Month)
             } else if (OneMonth == 7) {
-                console.log(TimeNow + comma + July)
+                console.log(TimeNow + comma + something_Month)
             } else if (OneMonth == 8) {
-                console.log(TimeNow + comma + August)
+                console.log(TimeNow + comma + something_Month)
             } else if (OneMonth == 9) {
-                console.log(TimeNow + comma + September)
+                console.log(TimeNow + comma + something_Month)
             } else if (OneMonth == 10) {
-                console.log(TimeNow + comma + October)
+                console.log(TimeNow + comma + something_Month)
             } else if (OneMonth == 11) {
-                console.log(TimeNow + comma + November)
+                console.log(TimeNow + comma + something_Month)
             } else if (OneMonth == 12) {
-                console.log(TimeNow + comma + December)
+                console.log(TimeNow + comma + something_Month)
             } else {
                 try {
                     throw new Error('ありえない月です、独自例外を発生させます!')
