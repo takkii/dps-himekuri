@@ -2,7 +2,7 @@ import {Denops} from 'https://deno.land/x/denops_std@v1.0.0-alpha.0/mod.ts'
 
 export async function main(denops: Denops): Promise<void> {
     denops.dispatcher = {
-        async himekuri(): Promise<void> {
+        himekuri: async function (): Promise<void> {
             let OneWeek = ['日', '月', '火', '水', '木', '金', '土']
             let OneDay = new Date()
             let comma = ' : '
@@ -32,7 +32,13 @@ export async function main(denops: Denops): Promise<void> {
                 (OneWeek[WeekDay]) + '曜日'
 
             try {
-                console.log(TimeNow + comma + something_Month)
+                if (isNaN(OneMonth)) {
+                    throw new Error('暦の月判定にNaNが表示されました、例外を発生させます!')
+                } else if (something_Month == '') {
+                    throw new Error('和風月に空文字列が表示されました、例外を発生させます!')
+                } else {
+                    console.log(TimeNow + comma + something_Month)
+                }
             } catch (e) {
                 console.error("例外を補足しました、メッセージです ... ", e.message);
             }
