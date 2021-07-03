@@ -32,7 +32,7 @@ export async function main(denops: Denops): Promise<void> {
                 (OneWeek[WeekDay]) + '曜日'
 
             try {
-                if (isNaN(OneMonth)) {
+                if (isNaN(OneMonth || anything_month)) {
                     throw new Error('暦の月判定にNaNが表示されました、例外を発生させます!')
                 } else if (something_Month == '') {
                     throw new Error('和風月に空文字列が表示されました、例外を発生させます!')
