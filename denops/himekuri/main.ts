@@ -3,22 +3,22 @@ import {Denops} from 'https://deno.land/x/denops_std@v1.0.0-alpha.0/mod.ts'
 export async function main(denops: Denops): Promise<void> {
     denops.dispatcher = {
         himekuri: async function (): Promise<void> {
-            let OneWeek = ['日', '月', '火', '水', '木', '金', '土']
-            let OneDay = new Date()
-            let comma = ' : '
-            let time_now = '時刻を表示'
-            let OneYear = OneDay.getFullYear()
-            const anything_month = OneDay.getMonth()
-            const OneMonth = anything_month + 1
-            let anyDays = OneDay.getDate()
-            let OneHour = OneDay.getHours()
-            let OneMinute = OneDay.getMinutes()
-            let OneSecond = OneDay.getSeconds()
-            let WeekDay = OneDay.getDay()
-            let anyMonth = ['睦月', '如月', '弥生', '卯月', '皐月', '水無月', '文月', '葉月', '長月', '神無月', '霜月', '師走']
-            let something_Month = anyMonth[anything_month]
+            let OneWeek: Array<string> = ['日', '月', '火', '水', '木', '金', '土']
+            let OneDay: Date = new Date()
+            let comma: string = ' : '
+            let time_now: string = '時刻を表示'
+            let OneYear: number = OneDay.getFullYear()
+            const anything_month: number = OneDay.getMonth()
+            const OneMonth: number = anything_month + 1
+            let anyDays: number = OneDay.getDate()
+            let OneHour: number = OneDay.getHours()
+            let OneMinute: number = OneDay.getMinutes()
+            let OneSecond: number = OneDay.getSeconds()
+            let WeekDay: number = OneDay.getDay()
+            let anyMonth: Array<string> = ['睦月', '如月', '弥生', '卯月', '皐月', '水無月', '文月', '葉月', '長月', '神無月', '霜月', '師走']
+            let something_Month: string = anyMonth[anything_month]
 
-            let TimeNow = time_now + comma +
+            let TimeNow: string = time_now + comma +
                 (OneYear) + '年' +
                 (OneMonth) + '月' +
                 (anyDays) + '日' + comma +
