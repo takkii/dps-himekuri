@@ -1,4 +1,5 @@
 import {Denops} from "https://deno.land/x/denops_std@v1.0.0-beta.0/mod.ts";
+import {execute} from "https://deno.land/x/denops_std@v1.0.0-beta.0/helper/mod.ts";
 
 export async function main(denops: Denops): Promise<void> {
     denops.dispatcher = {
@@ -41,7 +42,8 @@ export async function main(denops: Denops): Promise<void> {
         },
     }
 
-    await denops.cmd(
-        `command! Himekuri call denops#request('${denops.name}', 'himekuri', [])`
-    )
+    await execute(
+        denops,
+        `command! Himekuri call denops#notify('${denops.name}', 'himekuri', [])`
+    );
 }
