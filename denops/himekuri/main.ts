@@ -1,5 +1,5 @@
-import {Denops} from "https://deno.land/x/denops_std@v1.0.0-beta.0/mod.ts";
-import {execute} from "https://deno.land/x/denops_std@v1.0.0-beta.0/helper/mod.ts";
+import {Denops} from 'https://deno.land/x/denops_std@v1.0.0-beta.0/mod.ts';
+import {execute} from 'https://deno.land/x/denops_std@v1.0.0-beta.0/helper/mod.ts';
 
 export async function main(denops: Denops): Promise<void> {
     denops.dispatcher = {
@@ -37,7 +37,7 @@ export async function main(denops: Denops): Promise<void> {
                     console.log(TimeNow + comma + something_Month)
                 }
             } catch (e) {
-                console.error("例外を補足しました、メッセージです ... ", e.message);
+                console.error('例外を補足しました、メッセージです ... ', e.message);
             }
         },
     }
