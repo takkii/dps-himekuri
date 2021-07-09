@@ -31,7 +31,7 @@ function! Himekuri()
   elseif wahu == "011"
     echon "霜月"
   elseif wahu == "012"
-    echon echon "師走"
+    echon "師走"
   endif 
 
 endfunction
