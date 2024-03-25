@@ -9,5 +9,5 @@ function! Himekuri()
   execute 'echon' 'comma'
   execute 'echon' 'strftime("%Y年%m月%d日 : %H時%M分%S秒 : %A", time_now)'
   execute 'echon' 'comma'
-  execute 'echon' 'anyMonth[someday_Month]'  
+  execute 'echon' 'anyMonth[someday_Month]'
 endfunction
